@@ -60,7 +60,7 @@ Option|Possible values|Default|Description
 
 Notification|Description
 ------|-----------
-`TEMPLATE_RANDOM_TEXT`|Payload must contain the text that needs to be shown on this module
+`MYNEWMODULE_RANDOM_TEXT`|Payload must contain the text that needs to be shown on this module
 
 ## Developer commands
 
