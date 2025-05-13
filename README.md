@@ -1,11 +1,11 @@
-# MMM-Template
+# MMM-MyNewModule
 Use this template for creating new MagicMirror² modules.
 
 See the [wiki page](https://github.com/Dennis-Rosenbaum/MMM-Template/wiki) for an in depth overview of how to get started.
 
-# MMM-Template
+# MMM-MyNewModule
 
-![Example of MMM-Template](./example_1.png)
+![Example of MMM-MyNewModule](./example_1.png)
 
 [Module description]
 
@@ -13,17 +13,17 @@ See the [wiki page](https://github.com/Dennis-Rosenbaum/MMM-Template/wiki) for a
 
 ### Install
 
-In your terminal, go to your [MagicMirror²][mm] Module folder and clone MMM-Template:
+In your terminal, go to your [MagicMirror²][mm] Module folder and clone MMM-MyNewModule:
 
 ```bash
 cd ~/MagicMirror/modules
-git clone [GitHub url]
+git clone https://github.com/Fasiha-Mariyam/MMM-MyNewModule
 ```
 
 ### Update
 
 ```bash
-cd ~/MagicMirror/modules/MMM-Template
+cd ~/MagicMirror/modules/MMM-MyNewModule
 git pull
 ```
 
@@ -33,7 +33,7 @@ To use this module, add it to the modules array in the `config/config.js` file:
 
 ```js
     {
-        module: 'MMM-Template',
+        module: 'MMM-MyNewModule',
         position: 'lower_third'
     },
 ```
@@ -42,7 +42,7 @@ Or you could use all the options:
 
 ```js
     {
-        module: 'MMM-Template',
+        module: 'MMM-MyNewModule',
         position: 'lower_third',
         config: {
             exampleContent: 'Welcome world'
