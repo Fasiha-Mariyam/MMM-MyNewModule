@@ -8,14 +8,14 @@ Module.register("MMM-MyNewModule", {
    * Apply the default styles.
    */
   getStyles() {
-    return ["template.css"]
+    return ["my-new-module.css"]
   },
 
   /**
    * Pseudo-constructor for our module. Initialize stuff here.
    */
   start() {
-    this.templateContent = this.config.exampleContent
+    this.mynewmoduleContent = this.config.exampleContent
 
     // set timeout for next random text
     setInterval(() => this.addRandomText(), 3000)
@@ -30,7 +30,7 @@ Module.register("MMM-MyNewModule", {
    */
   socketNotificationReceived: function (notification, payload) {
     if (notification === "EXAMPLE_NOTIFICATION") {
-      this.templateContent = `${this.config.exampleContent} ${payload.text}`
+      this.mynewmoduleContent = `${this.config.exampleContent} ${payload.text}`
       this.updateDom()
     }
   },
@@ -40,7 +40,7 @@ Module.register("MMM-MyNewModule", {
    */
   getDom() {
     const wrapper = document.createElement("div")
-    wrapper.innerHTML = `<b>Title</b><br />${this.templateContent}`
+    wrapper.innerHTML = `<b>Title</b><br />${this.mynewmoduleContent}`
 
     return wrapper
   },
@@ -56,8 +56,8 @@ Module.register("MMM-MyNewModule", {
    * @param {number} payload the payload type.
    */
   notificationReceived(notification, payload) {
-    if (notification === "TEMPLATE_RANDOM_TEXT") {
-      this.templateContent = `${this.config.exampleContent} ${payload}`
+    if (notification === "MYNEWMODULE_RANDOM_TEXT") {
+      this.mynewmoduleContent = `${this.config.exampleContent} ${payload}`
       this.updateDom()
     }
   }
